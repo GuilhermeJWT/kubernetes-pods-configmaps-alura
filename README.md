@@ -1,5 +1,10 @@
 # Primeiros Passos e Comandos:
 kubectl get node = ver informações sobre o Cluster
+kubectl run nginx-pod --image=nginx:latest = ele cria um Pod
+kubectl get pods = vai mostrar o status de criação como se fosse um tipo de (Docker PS)
+kubectl get pods --watch = ele vai começar a acompanhar em tempo real, vizualização parecida com (Docker PS)
+kubectl describe pod nginx-pod =  ele vai exibir diversas informações como: Container ID, Conditions, Events e muitos outros
+kubectl edit pod nginx-pod = ele vai abrir o Bloco de Notas com as informaçoes pra você editar alguma coisa se caso precisar
 
 # Pods
 Pods são um conjunto de um ou mais Containers dentro, exemplo vamos pensar numa caixinha, e la dentro temos vários Containers
