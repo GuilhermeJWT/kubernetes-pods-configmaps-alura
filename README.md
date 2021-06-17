@@ -5,6 +5,7 @@ kubectl get pods = vai mostrar o status de criação como se fosse um tipo de (D
 kubectl get pods --watch = ele vai começar a acompanhar em tempo real, vizualização parecida com (Docker PS)
 kubectl describe pod nginx-pod =  ele vai exibir diversas informações como: Container ID, Conditions, Events e muitos outros
 kubectl edit pod nginx-pod = ele vai abrir o Bloco de Notas com as informaçoes pra você editar alguma coisa se caso precisar
+kubectl apply -f .\primeiro-pod.yaml = vai applycar as configurações que estão no arquivo Yaml
 
 # Pods
 Pods são um conjunto de um ou mais Containers dentro, exemplo vamos pensar numa caixinha, e la dentro temos vários Containers
@@ -17,4 +18,20 @@ Exemplo: Caso tem 2 Containers dentro de um Pod, se 1 Container der pau, o Pod c
 
 Qual a grande vantagem de eles compartilhar o mesmo IP?
 Reposta: Eles podem fazer a comunicação entre eles no mesmo LocalHost
+
+# Criando um arquivo yaml 
+Criamos um arquivo chamado primeiro-pod.yaml e nele colocamos configurações como:
+apiVersion: v1
+kind: Pod
+metadata:
+  name: primeiro-pod-declarativo
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:1.0
+
+E ao entrarmos na pasta do arquivo, damos os comandos:
+kubectl apply -f .\primeiro-pod.yaml = para aplicar o arquivo e
+kibectl get pods --watch  = acompanhamos o andamento
+      
 
