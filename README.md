@@ -8,6 +8,7 @@ kubectl edit pod nginx-pod = ele vai abrir o Bloco de Notas com as informaçoes 
 kubectl apply -f .\primeiro-pod.yaml = vai applycar as configurações que estão no arquivo Yaml
 kubectl delete pod nginx-pod = remove o pod
 kubectl delete -f .\primeiro-pod.yaml =  ele vai la no arquivo e remove o POD
+kubectl exec -it portal-noticias -- bash = agente entra dentro do container para digitar comandos, como se fosse (Docker Exec .. nome do container)
 
 # Pods
 Pods são um conjunto de um ou mais Containers dentro, exemplo vamos pensar numa caixinha, e la dentro temos vários Containers
