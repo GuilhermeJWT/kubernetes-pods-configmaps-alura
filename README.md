@@ -6,6 +6,8 @@ kubectl get pods --watch = ele vai começar a acompanhar em tempo real, vizualiz
 kubectl describe pod nginx-pod =  ele vai exibir diversas informações como: Container ID, Conditions, Events e muitos outros
 kubectl edit pod nginx-pod = ele vai abrir o Bloco de Notas com as informaçoes pra você editar alguma coisa se caso precisar
 kubectl apply -f .\primeiro-pod.yaml = vai applycar as configurações que estão no arquivo Yaml
+kubectl delete pod nginx-pod = remove o pod
+kubectl delete -f .\primeiro-pod.yaml =  ele vai la no arquivo e remove o POD
 
 # Pods
 Pods são um conjunto de um ou mais Containers dentro, exemplo vamos pensar numa caixinha, e la dentro temos vários Containers
