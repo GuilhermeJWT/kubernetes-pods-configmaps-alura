@@ -9,6 +9,7 @@ kubectl apply -f .\primeiro-pod.yaml = vai applycar as configurações que estã
 kubectl delete pod nginx-pod = remove o pod
 kubectl delete -f .\primeiro-pod.yaml =  ele vai la no arquivo e remove o POD
 kubectl exec -it portal-noticias -- bash = agente entra dentro do container para digitar comandos, como se fosse (Docker Exec .. nome do container)
+kubectl get pods -o wide = vai exibir os arquivos. IP e docker-desktop
 
 # Pods
 Pods são um conjunto de um ou mais Containers dentro, exemplo vamos pensar numa caixinha, e la dentro temos vários Containers
@@ -21,6 +22,11 @@ Exemplo: Caso tem 2 Containers dentro de um Pod, se 1 Container der pau, o Pod c
 
 Qual a grande vantagem de eles compartilhar o mesmo IP?
 Reposta: Eles podem fazer a comunicação entre eles no mesmo LocalHost
+
+# Svc = Service
+Eles são capases de de conectar aos pods, Exemplo: temos 5 pods, se 1 deles morrer, o novo vai ser reconhecido pelos outros 4
+Preveem IP's fixos para a comunicação
+Fazem Balanceamento de Cargo
 
 # Criando um arquivo yaml 
 Criamos um arquivo chamado primeiro-pod.yaml e nele colocamos configurações como:
