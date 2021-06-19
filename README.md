@@ -6,6 +6,12 @@ kubectl get pods --watch = ele vai começar a acompanhar em tempo real, vizualiz
 kubectl describe pod nginx-pod =  ele vai exibir diversas informações como: Container ID, Conditions, Events e muitos outros
 kubectl edit pod nginx-pod = ele vai abrir o Bloco de Notas com as informaçoes pra você editar alguma coisa se caso precisar
 kubectl apply -f .\primeiro-pod.yaml = vai applycar as configurações que estão no arquivo Yaml
+kubectl delete pod nginx-pod = remove o pod
+kubectl delete -f .\primeiro-pod.yaml =  ele vai la no arquivo e remove o POD
+kubectl exec -it portal-noticias -- bash = agente entra dentro do container para digitar comandos, como se fosse (Docker Exec .. nome do container)
+kubectl get pods -o wide = vai exibir os arquivos. IP e docker-desktop
+kubectl get svc = vai listar todas as serviços, e vai mostrar coisas como IP's que foram criado para eles naquele momento e Porta tipo 80/TPC
+kubectl exec -it pod-1 --bash e dar um curl no ip como 10.106.130.115:80 = ele vai exibir o código fonte da pagina HTML que no caso deu certo
 
 # Pods
 Pods são um conjunto de um ou mais Containers dentro, exemplo vamos pensar numa caixinha, e la dentro temos vários Containers
@@ -18,6 +24,11 @@ Exemplo: Caso tem 2 Containers dentro de um Pod, se 1 Container der pau, o Pod c
 
 Qual a grande vantagem de eles compartilhar o mesmo IP?
 Reposta: Eles podem fazer a comunicação entre eles no mesmo LocalHost
+
+# Svc = Service
+Eles são capases de de conectar aos pods, Exemplo: temos 5 pods, se 1 deles morrer, o novo vai ser reconhecido pelos outros 4
+Preveem IP's fixos para a comunicação
+Fazem Balanceamento de Cargo
 
 # Criando um arquivo yaml 
 Criamos um arquivo chamado primeiro-pod.yaml e nele colocamos configurações como:
