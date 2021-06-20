@@ -30,6 +30,9 @@ Eles são capases de de conectar aos pods, Exemplo: temos 5 pods, se 1 deles mor
 Preveem IP's fixos para a comunicação
 Fazem Balanceamento de Cargo
 
+# Cm = ConfigMap
+Responsavel por definir configuração que vão ser precisas dentro do Pod, exemplo setar váriaveis de configurações de acesso ao Banco de Dados, os ConfigMap é voltado para esse tipo de responsabilidade. 
+
 # Criando um arquivo yaml 
 Criamos um arquivo chamado primeiro-pod.yaml e nele colocamos configurações como:
 apiVersion: v1
